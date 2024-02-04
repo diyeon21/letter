@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('images/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #fb74b7;
+        }
+
+        .icon {
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            background-color: #ffb6c1;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+            transform: scale(1.05);
+        }
+
+        .heart-icon,
+        .tear-icon {
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+    <title>Miss You</title>
+</head>
+<body>
+    <div class="container">
+        <h1><img src="images-removebg-preview (1).png" alt="Cinnamoroll" class="icon"> I miss you Greece, do you miss me?</h1>
+        <div class="buttons">
+            <button id="yesButton"><img src="images/1000_F_321062951_kuwLPNjLrWZLQ3oSOuM0TIQAzTyTJHet-removebg-preview.png" alt="Heart Icon" class="heart-icon"> Yes</button>
+            <button id="noButton"><img src="pngtree-3d-sad-emoji-png-png-image_3578959-removebg-preview.png" alt="Tear Icon" class="tear-icon"> No</button>
+        </div>
+    </div>
+    <script>
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+
+        noButton.addEventListener("mouseover", () => {
+            const maxX = window.innerWidth - noButton.clientWidth;
+            const maxY = window.innerHeight - noButton.clientHeight;
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+            noButton.style.position = "absolute";
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        yesButton.addEventListener("click", () => {
+            alert("YEY PAKISS!!!");
+        });
+
+        noButton.addEventListener("click", () => {
+            alert("Aw, PUTANGINA MO PALA EH");
+        });
+    </script>
+</body>
+</html>
